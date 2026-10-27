@@ -1,0 +1,10 @@
+t_ms,from_state,to_state,cell,trigger
+0,IDLE,RA_MSG1,A,"camped on strongest cell A (-65.5 dBm), send preamble"
+20,RA_MSG1,RA_MSG2,A,"RAR received, timing advance TA = 1 (0.52 us)"
+40,RA_MSG2,RA_MSG3,A,uplink grant used: RRC connection request sent
+60,RA_MSG3,RA_MSG4,A,awaiting contention resolution
+80,RA_MSG4,CONNECTED,A,contention resolved: RRC connected
+36380,CONNECTED,HANDOVER,B,"policy: serving A -104.3 dBm, target B -96.9 dBm"
+36420,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+100680,CONNECTED,HANDOVER,C,"policy: serving B -105.0 dBm, target C -91.9 dBm"
+100720,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)

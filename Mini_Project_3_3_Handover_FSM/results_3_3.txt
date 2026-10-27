@@ -1,0 +1,64 @@
+Scenario: road past sites A (x=0), B (x=1000 m), C (x=2000 m), 60 m offset; 15 m/s (54 km/h); 6334 ticks of 20 ms = 126.7 s
+  RSRP = 15 dBm/RE - (128.1 + 37.6 log10 d_km) + shadowing (sigma 4 dB, decorrelation 50 m) + measurement noise (sigma 1.5 dB)
+  Q_OUT = -110.0 dBm, T310 = 500 ms, Q_RXLEVMIN = -115.0 dBm, HO execution = 40 ms, preamble collision probability = 0.1
+  A/B are the two strongest cells and within 3 dB of each other for 5.2 s (x = 366-734 m); their order flips 99 times there: decision region
+  B/C are the two strongest cells and within 3 dB of each other for 8.2 s (x = 1245-1795 m); their order flips 187 times there: decision region
+==========================================================================================
+policy                                         HO HO fail  RLF ping-pong  not connected  RACH
+naive (no margin, no TTT)                     162       0    0       151         6.56 s     1
+hysteresis 3 dB + TTT 320 ms                    2       0    0         0         0.16 s     1
+over-tuned: hysteresis 10 dB + TTT 5120 ms      0       0    2         0         2.28 s     3
+  (HO fail = handover started but failed; RLF = radio link failure while CONNECTED; both return to IDLE. 'not connected' includes attach, handover execution and re-establishment time)
+==========================================================================================
+Transition log excerpt - naive (no margin, no TTT) (329 transitions in total)
+  t=   0.00 s       IDLE -> RA_MSG1   cell A: camped on strongest cell A (-65.5 dBm), send preamble
+  t=   0.02 s    RA_MSG1 -> RA_MSG2   cell A: RAR received, timing advance TA = 1 (0.52 us)
+  t=   0.04 s    RA_MSG2 -> RA_MSG3   cell A: uplink grant used: RRC connection request sent
+  t=   0.06 s    RA_MSG3 -> RA_MSG4   cell A: awaiting contention resolution
+  t=   0.08 s    RA_MSG4 -> CONNECTED cell A: contention resolved: RRC connected
+  t=  22.70 s  CONNECTED -> HANDOVER  cell B: policy: serving A -98.0 dBm, target B -97.7 dBm
+  t=  22.74 s   HANDOVER -> CONNECTED cell B: handover complete (contention-free access at target)
+  t=  22.76 s  CONNECTED -> HANDOVER  cell A: policy: serving B -100.1 dBm, target A -94.9 dBm
+  t=  22.80 s   HANDOVER -> CONNECTED cell A: handover complete (contention-free access at target)
+  ping-pongs: 151, first: A -> B at 22.74 s and back at 22.80 s
+Transition log excerpt - hysteresis 3 dB + TTT 320 ms (9 transitions in total)
+  t=   0.00 s       IDLE -> RA_MSG1   cell A: camped on strongest cell A (-65.5 dBm), send preamble
+  t=   0.02 s    RA_MSG1 -> RA_MSG2   cell A: RAR received, timing advance TA = 1 (0.52 us)
+  t=   0.04 s    RA_MSG2 -> RA_MSG3   cell A: uplink grant used: RRC connection request sent
+  t=   0.06 s    RA_MSG3 -> RA_MSG4   cell A: awaiting contention resolution
+  t=   0.08 s    RA_MSG4 -> CONNECTED cell A: contention resolved: RRC connected
+  t=  36.38 s  CONNECTED -> HANDOVER  cell B: policy: serving A -104.3 dBm, target B -96.9 dBm
+  t=  36.42 s   HANDOVER -> CONNECTED cell B: handover complete (contention-free access at target)
+  t= 100.68 s  CONNECTED -> HANDOVER  cell C: policy: serving B -105.0 dBm, target C -91.9 dBm
+  t= 100.72 s   HANDOVER -> CONNECTED cell C: handover complete (contention-free access at target)
+Transition log excerpt - over-tuned: hysteresis 10 dB + TTT 5120 ms (17 transitions in total)
+  t=   0.00 s       IDLE -> RA_MSG1   cell A: camped on strongest cell A (-65.5 dBm), send preamble
+  t=   0.02 s    RA_MSG1 -> RA_MSG2   cell A: RAR received, timing advance TA = 1 (0.52 us)
+  t=   0.04 s    RA_MSG2 -> RA_MSG3   cell A: uplink grant used: RRC connection request sent
+  t=   0.06 s    RA_MSG3 -> RA_MSG4   cell A: awaiting contention resolution
+  t=   0.08 s    RA_MSG4 -> CONNECTED cell A: contention resolved: RRC connected
+  t=  49.88 s  CONNECTED -> IDLE      cell A: RADIO LINK FAILURE: serving A below -110 dBm for 500 ms (too-late handover)
+  t=  50.90 s       IDLE -> RA_MSG1   cell B: camped on strongest cell B (-81.4 dBm), send preamble
+  t=  50.92 s    RA_MSG1 -> RA_MSG2   cell B: RAR received, timing advance TA = 3 (1.30 us)
+  t=  50.94 s    RA_MSG2 -> RA_MSG3   cell B: uplink grant used: RRC connection request sent
+  t=  50.96 s    RA_MSG3 -> RA_MSG4   cell B: awaiting contention resolution
+  t=  50.98 s    RA_MSG4 -> CONNECTED cell B: contention resolved: RRC connected
+  t= 103.70 s  CONNECTED -> IDLE      cell B: RADIO LINK FAILURE: serving B below -110 dBm for 500 ms (too-late handover)
+  t= 104.72 s       IDLE -> RA_MSG1   cell C: camped on strongest cell C (-99.3 dBm), send preamble
+  t= 104.74 s    RA_MSG1 -> RA_MSG2   cell C: RAR received, timing advance TA = 5 (2.56 us)
+  t= 104.76 s    RA_MSG2 -> RA_MSG3   cell C: uplink grant used: RRC connection request sent
+  t= 104.78 s    RA_MSG3 -> RA_MSG4   cell C: awaiting contention resolution
+  t= 104.80 s    RA_MSG4 -> CONNECTED cell C: contention resolved: RRC connected
+==========================================================================================
+RACH check: 1000 attach attempts on a static -90 dBm cell, preamble collision probability 0.1
+  connected in 1000/1000; collisions observed 112; attach time: 80 ms (no collision) in 89.8% of attaches, mean 93.6 ms, max 460 ms
+  example with a collision:
+    t=   0 ms      IDLE -> RA_MSG1   camped on strongest cell A (-90.0 dBm), send preamble
+    t=  20 ms   RA_MSG1 -> RA_MSG2   RAR received, timing advance TA = 4 (2.04 us)
+    t=  40 ms   RA_MSG2 -> RA_MSG3   uplink grant used: RRC connection request sent
+    t=  60 ms   RA_MSG3 -> RA_MSG4   awaiting contention resolution
+    t=  80 ms   RA_MSG4 -> RA_MSG1   preamble collision, back off 1 tick(s), retry
+    t= 120 ms   RA_MSG1 -> RA_MSG2   RAR received, timing advance TA = 4 (2.04 us)
+    t= 140 ms   RA_MSG2 -> RA_MSG3   uplink grant used: RRC connection request sent
+    t= 160 ms   RA_MSG3 -> RA_MSG4   awaiting contention resolution
+    t= 180 ms   RA_MSG4 -> CONNECTED contention resolved: RRC connected

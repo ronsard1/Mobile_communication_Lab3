@@ -1,0 +1,18 @@
+t_ms,from_state,to_state,cell,trigger
+0,IDLE,RA_MSG1,A,"camped on strongest cell A (-65.5 dBm), send preamble"
+20,RA_MSG1,RA_MSG2,A,"RAR received, timing advance TA = 1 (0.52 us)"
+40,RA_MSG2,RA_MSG3,A,uplink grant used: RRC connection request sent
+60,RA_MSG3,RA_MSG4,A,awaiting contention resolution
+80,RA_MSG4,CONNECTED,A,contention resolved: RRC connected
+49880,CONNECTED,IDLE,A,RADIO LINK FAILURE: serving A below -110 dBm for 500 ms (too-late handover)
+50900,IDLE,RA_MSG1,B,"camped on strongest cell B (-81.4 dBm), send preamble"
+50920,RA_MSG1,RA_MSG2,B,"RAR received, timing advance TA = 3 (1.30 us)"
+50940,RA_MSG2,RA_MSG3,B,uplink grant used: RRC connection request sent
+50960,RA_MSG3,RA_MSG4,B,awaiting contention resolution
+50980,RA_MSG4,CONNECTED,B,contention resolved: RRC connected
+103700,CONNECTED,IDLE,B,RADIO LINK FAILURE: serving B below -110 dBm for 500 ms (too-late handover)
+104720,IDLE,RA_MSG1,C,"camped on strongest cell C (-99.3 dBm), send preamble"
+104740,RA_MSG1,RA_MSG2,C,"RAR received, timing advance TA = 5 (2.56 us)"
+104760,RA_MSG2,RA_MSG3,C,uplink grant used: RRC connection request sent
+104780,RA_MSG3,RA_MSG4,C,awaiting contention resolution
+104800,RA_MSG4,CONNECTED,C,contention resolved: RRC connected

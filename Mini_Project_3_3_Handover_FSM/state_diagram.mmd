@@ -1,0 +1,17 @@
+stateDiagram-v2
+    direction TB
+    [*] --> IDLE
+    IDLE --> RA_MSG1: strongest cell >= -115 dBm<br/>(after 1 s search if a failure occurred)
+    state "Random Access (RACH)" as RA {
+        RA_MSG1 --> RA_MSG2: RAR received<br/>(timing advance)
+        RA_MSG1 --> RA_MSG1: no RAR<br/>(power ramp, retry)
+        RA_MSG2 --> RA_MSG3: UL grant + TA applied
+        RA_MSG3 --> RA_MSG4: RRC connection<br/>request sent
+        RA_MSG4 --> RA_MSG1: preamble collision<br/>(random back-off)
+    }
+    RA_MSG4 --> CONNECTED: contention resolved
+    RA_MSG1 --> IDLE: attempts exhausted<br/>(RACH failure)
+    CONNECTED --> HANDOVER: policy fires<br/>(naive or hysteresis + TTT)
+    HANDOVER --> CONNECTED: access at target done<br/>(serving := target)
+    HANDOVER --> IDLE: HO failure<br/>(command lost / target too weak)
+    CONNECTED --> IDLE: RLF: serving < -110 dBm<br/>for 500 ms (too late)

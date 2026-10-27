@@ -1,0 +1,41 @@
+Configuration:
+  total_spectrum_kHz   = 20000
+  channel_bw_kHz       = 200
+  reuse_factors        = [1, 3, 4, 7, 9, 12]
+  area_km2             = 500.0
+  R_km                 = 2.0
+  pathloss_n           = 4.0
+  sir_required_dB      = 18.0
+  blocking             = 0.02
+  split_factors        = [1, 2, 4]
+  hexagon area = 2.598 R^2 = 10.392 km^2 -> 48.11 cells fit, 48 used
+====================================================================================================
+  N  ch/cell  spare  cells  capacity  ch/km2      Q  SIR dB meets 18 dB  Erl/cell  Erl total
+  1      100      0     48      4800    9.60   1.73     1.8          no     87.97     4222.7
+  3       33      1     48      1584    3.17   3.00    11.3          no     24.63     1182.0
+  4       25      0     48      1200    2.40   3.46    13.8          no     17.50      840.2
+  7       14      2     48       672    1.34   4.58    18.7         yes      8.20      393.6
+  9       11      1     48       528    1.06   5.20    20.8         yes      5.84      280.4
+ 12        8      4     48       384    0.77   6.00    23.3         yes      3.63      174.1
+====================================================================================================
+Cell splitting at N = 7 (Q and SIR unchanged because D and R shrink together)
+  R = 2.00 km: cells    48, capacity    672 channels ( 1.00x),   393.6 Erl ( 1.00x), SIR 18.7 dB
+  R = 1.00 km: cells   192, capacity   2688 channels ( 4.00x),  1574.5 Erl ( 4.00x), SIR 18.7 dB
+  R = 0.50 km: cells   769, capacity  10766 channels (16.02x),  6306.0 Erl (16.02x), SIR 18.7 dB
+====================================================================================================
+Sectoring (same sites, same spectrum): interferers 6 -> 2 (120 deg) -> 1 (60 deg)
+  N =  7, 1 sector(s): channels per sector [14], SIR  18.7 dB (meets 18 dB), capacity 672 channels, 393.6 Erl
+  N =  7, 3 sector(s): channels per sector [5, 5, 4], SIR  23.4 dB (meets 18 dB), capacity 672 channels, 211.5 Erl
+  N =  4, 3 sector(s): channels per sector [9, 8, 8], SIR  18.6 dB (meets 18 dB), capacity 1200 channels, 556.7 Erl
+  N =  3, 6 sector(s): channels per sector [6, 6, 6, 5, 5, 5], SIR  19.1 dB (meets 18 dB), capacity 1584 channels, 566.4 Erl
+  N = 12, 1 sector(s): channels per sector [8], SIR  23.3 dB (meets 18 dB), capacity 384 channels, 174.1 Erl
+  N =  4, 1 sector(s): channels per sector [25], SIR  13.8 dB (fails 18 dB), capacity 1200 channels, 840.2 Erl
+====================================================================================================
+Capacity levers relative to N = 7 omni (Erlang capacity at 2% blocking):
+  N=7 omni (baseline)      x  1.00  (  393.6 Erl, 672 channels, SIR 18.7 dB, 48 sites)
+  N=7 3 sectors            x  0.54  (  211.5 Erl, 672 channels, SIR 23.4 dB, 48 sites)
+  N=4 3 sectors            x  1.41  (  556.7 Erl, 1200 channels, SIR 18.6 dB, 48 sites)
+  N=3 6 sectors            x  1.44  (  566.4 Erl, 1584 channels, SIR 19.1 dB, 48 sites)
+  N=7 omni R/2 split       x  4.00  ( 1574.5 Erl, 2688 channels, SIR 18.7 dB, 192 sites)
+  N=4 3-sect. + R/2 split  x  5.66  ( 2227.0 Erl, 4800 channels, SIR 18.6 dB, 192 sites)
+  N=7 omni R/4 split       x 16.02  ( 6306.0 Erl, 10766 channels, SIR 18.7 dB, 769 sites)

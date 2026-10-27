@@ -1,0 +1,330 @@
+t_ms,from_state,to_state,cell,trigger
+0,IDLE,RA_MSG1,A,"camped on strongest cell A (-65.5 dBm), send preamble"
+20,RA_MSG1,RA_MSG2,A,"RAR received, timing advance TA = 1 (0.52 us)"
+40,RA_MSG2,RA_MSG3,A,uplink grant used: RRC connection request sent
+60,RA_MSG3,RA_MSG4,A,awaiting contention resolution
+80,RA_MSG4,CONNECTED,A,contention resolved: RRC connected
+22700,CONNECTED,HANDOVER,B,"policy: serving A -98.0 dBm, target B -97.7 dBm"
+22740,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+22760,CONNECTED,HANDOVER,A,"policy: serving B -100.1 dBm, target A -94.9 dBm"
+22800,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+25540,CONNECTED,HANDOVER,B,"policy: serving A -99.5 dBm, target B -98.5 dBm"
+25580,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+25600,CONNECTED,HANDOVER,A,"policy: serving B -101.4 dBm, target A -95.6 dBm"
+25640,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+27580,CONNECTED,HANDOVER,B,"policy: serving A -99.4 dBm, target B -99.4 dBm"
+27620,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+27640,CONNECTED,HANDOVER,A,"policy: serving B -102.8 dBm, target A -98.0 dBm"
+27680,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+28140,CONNECTED,HANDOVER,B,"policy: serving A -101.2 dBm, target B -98.9 dBm"
+28180,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+28240,CONNECTED,HANDOVER,A,"policy: serving B -101.1 dBm, target A -97.9 dBm"
+28280,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+28300,CONNECTED,HANDOVER,B,"policy: serving A -99.4 dBm, target B -97.8 dBm"
+28340,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+28360,CONNECTED,HANDOVER,A,"policy: serving B -101.1 dBm, target A -98.9 dBm"
+28400,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+28480,CONNECTED,HANDOVER,B,"policy: serving A -99.6 dBm, target B -99.5 dBm"
+28520,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+28540,CONNECTED,HANDOVER,A,"policy: serving B -102.0 dBm, target A -97.6 dBm"
+28580,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+28600,CONNECTED,HANDOVER,B,"policy: serving A -98.1 dBm, target B -96.9 dBm"
+28640,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+28680,CONNECTED,HANDOVER,A,"policy: serving B -101.5 dBm, target A -99.1 dBm"
+28720,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+28860,CONNECTED,HANDOVER,B,"policy: serving A -101.7 dBm, target B -98.8 dBm"
+28900,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+28960,CONNECTED,HANDOVER,A,"policy: serving B -102.4 dBm, target A -98.4 dBm"
+29000,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+29060,CONNECTED,HANDOVER,B,"policy: serving A -101.3 dBm, target B -98.1 dBm"
+29100,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+29140,CONNECTED,HANDOVER,A,"policy: serving B -101.6 dBm, target A -100.7 dBm"
+29180,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+29200,CONNECTED,HANDOVER,B,"policy: serving A -100.2 dBm, target B -99.5 dBm"
+29240,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+29260,CONNECTED,HANDOVER,A,"policy: serving B -102.2 dBm, target A -101.7 dBm"
+29300,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+29360,CONNECTED,HANDOVER,B,"policy: serving A -102.1 dBm, target B -101.8 dBm"
+29400,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+29420,CONNECTED,HANDOVER,A,"policy: serving B -102.4 dBm, target A -101.3 dBm"
+29460,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+29480,CONNECTED,HANDOVER,B,"policy: serving A -103.9 dBm, target B -100.7 dBm"
+29520,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+29580,CONNECTED,HANDOVER,A,"policy: serving B -101.5 dBm, target A -101.2 dBm"
+29620,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+29660,CONNECTED,HANDOVER,B,"policy: serving A -101.9 dBm, target B -99.1 dBm"
+29700,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+29780,CONNECTED,HANDOVER,A,"policy: serving B -100.5 dBm, target A -99.9 dBm"
+29820,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+29940,CONNECTED,HANDOVER,B,"policy: serving A -101.1 dBm, target B -100.7 dBm"
+29980,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+30000,CONNECTED,HANDOVER,A,"policy: serving B -103.2 dBm, target A -99.4 dBm"
+30040,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+30080,CONNECTED,HANDOVER,B,"policy: serving A -102.3 dBm, target B -100.0 dBm"
+30120,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+30180,CONNECTED,HANDOVER,A,"policy: serving B -103.5 dBm, target A -103.2 dBm"
+30220,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+30280,CONNECTED,HANDOVER,B,"policy: serving A -104.3 dBm, target B -103.1 dBm"
+30320,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+30340,CONNECTED,HANDOVER,A,"policy: serving B -99.6 dBm, target A -99.3 dBm"
+30380,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+32320,CONNECTED,HANDOVER,B,"policy: serving A -102.6 dBm, target B -102.3 dBm"
+32360,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+32400,CONNECTED,HANDOVER,A,"policy: serving B -100.4 dBm, target A -100.3 dBm"
+32440,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+32480,CONNECTED,HANDOVER,B,"policy: serving A -101.2 dBm, target B -101.2 dBm"
+32520,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+32540,CONNECTED,HANDOVER,A,"policy: serving B -102.0 dBm, target A -101.7 dBm"
+32580,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+33780,CONNECTED,HANDOVER,B,"policy: serving A -100.0 dBm, target B -98.9 dBm"
+33820,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+33840,CONNECTED,HANDOVER,A,"policy: serving B -100.6 dBm, target A -97.0 dBm"
+33880,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+35080,CONNECTED,HANDOVER,B,"policy: serving A -100.7 dBm, target B -100.2 dBm"
+35120,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+35140,CONNECTED,HANDOVER,A,"policy: serving B -100.7 dBm, target A -97.8 dBm"
+35180,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+35200,CONNECTED,HANDOVER,B,"policy: serving A -100.3 dBm, target B -97.6 dBm"
+35240,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+35280,CONNECTED,HANDOVER,A,"policy: serving B -99.1 dBm, target A -99.0 dBm"
+35320,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+35340,CONNECTED,HANDOVER,B,"policy: serving A -97.3 dBm, target B -96.5 dBm"
+35380,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+35440,CONNECTED,HANDOVER,A,"policy: serving B -100.9 dBm, target A -99.1 dBm"
+35480,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+35500,CONNECTED,HANDOVER,B,"policy: serving A -103.0 dBm, target B -97.3 dBm"
+35540,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+35580,CONNECTED,HANDOVER,A,"policy: serving B -102.9 dBm, target A -101.9 dBm"
+35620,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+35640,CONNECTED,HANDOVER,B,"policy: serving A -99.7 dBm, target B -99.5 dBm"
+35680,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+35760,CONNECTED,HANDOVER,A,"policy: serving B -100.5 dBm, target A -98.7 dBm"
+35800,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+35820,CONNECTED,HANDOVER,B,"policy: serving A -103.0 dBm, target B -99.5 dBm"
+35860,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+44080,CONNECTED,HANDOVER,A,"policy: serving B -101.2 dBm, target A -101.2 dBm"
+44120,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+44140,CONNECTED,HANDOVER,B,"policy: serving A -100.6 dBm, target B -98.2 dBm"
+44180,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+44880,CONNECTED,HANDOVER,A,"policy: serving B -100.4 dBm, target A -98.0 dBm"
+44920,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+44940,CONNECTED,HANDOVER,B,"policy: serving A -100.3 dBm, target B -95.0 dBm"
+44980,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+45140,CONNECTED,HANDOVER,A,"policy: serving B -100.6 dBm, target A -97.0 dBm"
+45180,HANDOVER,CONNECTED,A,handover complete (contention-free access at target)
+45220,CONNECTED,HANDOVER,B,"policy: serving A -97.3 dBm, target B -96.0 dBm"
+45260,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+94460,CONNECTED,HANDOVER,C,"policy: serving B -99.4 dBm, target C -99.2 dBm"
+94500,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+94520,CONNECTED,HANDOVER,B,"policy: serving C -101.3 dBm, target B -96.2 dBm"
+94560,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+95200,CONNECTED,HANDOVER,C,"policy: serving B -100.5 dBm, target C -98.4 dBm"
+95240,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+95260,CONNECTED,HANDOVER,B,"policy: serving C -100.6 dBm, target B -94.4 dBm"
+95300,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+95420,CONNECTED,HANDOVER,C,"policy: serving B -97.9 dBm, target C -97.3 dBm"
+95460,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+95480,CONNECTED,HANDOVER,B,"policy: serving C -99.0 dBm, target B -97.7 dBm"
+95520,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+95600,CONNECTED,HANDOVER,C,"policy: serving B -99.1 dBm, target C -98.7 dBm"
+95640,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+95660,CONNECTED,HANDOVER,B,"policy: serving C -101.6 dBm, target B -99.6 dBm"
+95700,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+95720,CONNECTED,HANDOVER,C,"policy: serving B -99.3 dBm, target C -99.0 dBm"
+95760,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+95780,CONNECTED,HANDOVER,B,"policy: serving C -94.4 dBm, target B -93.4 dBm"
+95820,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+95880,CONNECTED,HANDOVER,C,"policy: serving B -97.5 dBm, target C -96.3 dBm"
+95920,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+95940,CONNECTED,HANDOVER,B,"policy: serving C -100.4 dBm, target B -97.2 dBm"
+95980,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+96040,CONNECTED,HANDOVER,C,"policy: serving B -99.7 dBm, target C -98.3 dBm"
+96080,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+96100,CONNECTED,HANDOVER,B,"policy: serving C -100.9 dBm, target B -99.7 dBm"
+96140,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+96160,CONNECTED,HANDOVER,C,"policy: serving B -98.7 dBm, target C -98.1 dBm"
+96200,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+96220,CONNECTED,HANDOVER,B,"policy: serving C -98.5 dBm, target B -98.2 dBm"
+96260,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+96300,CONNECTED,HANDOVER,C,"policy: serving B -102.4 dBm, target C -100.3 dBm"
+96340,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+96380,CONNECTED,HANDOVER,B,"policy: serving C -102.9 dBm, target B -99.5 dBm"
+96420,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+96480,CONNECTED,HANDOVER,C,"policy: serving B -101.6 dBm, target C -100.3 dBm"
+96520,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+96540,CONNECTED,HANDOVER,B,"policy: serving C -103.9 dBm, target B -97.8 dBm"
+96580,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+96760,CONNECTED,HANDOVER,C,"policy: serving B -100.8 dBm, target C -100.6 dBm"
+96800,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+96840,CONNECTED,HANDOVER,B,"policy: serving C -104.2 dBm, target B -98.6 dBm"
+96880,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+97080,CONNECTED,HANDOVER,C,"policy: serving B -101.5 dBm, target C -100.6 dBm"
+97120,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+97140,CONNECTED,HANDOVER,B,"policy: serving C -102.0 dBm, target B -99.4 dBm"
+97180,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+97200,CONNECTED,HANDOVER,C,"policy: serving B -102.7 dBm, target C -99.1 dBm"
+97240,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+97260,CONNECTED,HANDOVER,B,"policy: serving C -101.3 dBm, target B -99.5 dBm"
+97300,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+97340,CONNECTED,HANDOVER,C,"policy: serving B -101.1 dBm, target C -100.9 dBm"
+97380,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+97420,CONNECTED,HANDOVER,B,"policy: serving C -103.2 dBm, target B -99.2 dBm"
+97460,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+97500,CONNECTED,HANDOVER,C,"policy: serving B -105.5 dBm, target C -102.9 dBm"
+97540,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+97560,CONNECTED,HANDOVER,B,"policy: serving C -99.9 dBm, target B -98.7 dBm"
+97600,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+97620,CONNECTED,HANDOVER,C,"policy: serving B -102.5 dBm, target C -97.7 dBm"
+97660,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+97700,CONNECTED,HANDOVER,B,"policy: serving C -102.4 dBm, target B -100.8 dBm"
+97740,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+97760,CONNECTED,HANDOVER,C,"policy: serving B -101.2 dBm, target C -99.4 dBm"
+97800,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+98180,CONNECTED,HANDOVER,B,"policy: serving C -95.1 dBm, target B -95.1 dBm"
+98220,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+98240,CONNECTED,HANDOVER,C,"policy: serving B -98.3 dBm, target C -95.4 dBm"
+98280,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+98380,CONNECTED,HANDOVER,B,"policy: serving C -96.3 dBm, target B -94.8 dBm"
+98420,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+98440,CONNECTED,HANDOVER,C,"policy: serving B -98.9 dBm, target C -96.3 dBm"
+98480,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+98820,CONNECTED,HANDOVER,B,"policy: serving C -99.6 dBm, target B -99.6 dBm"
+98860,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+98880,CONNECTED,HANDOVER,C,"policy: serving B -100.5 dBm, target C -99.2 dBm"
+98920,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+99000,CONNECTED,HANDOVER,B,"policy: serving C -100.9 dBm, target B -100.8 dBm"
+99040,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+99060,CONNECTED,HANDOVER,C,"policy: serving B -104.9 dBm, target C -102.1 dBm"
+99100,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+99140,CONNECTED,HANDOVER,B,"policy: serving C -101.6 dBm, target B -97.6 dBm"
+99180,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+99200,CONNECTED,HANDOVER,C,"policy: serving B -101.4 dBm, target C -98.4 dBm"
+99240,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+99460,CONNECTED,HANDOVER,B,"policy: serving C -98.4 dBm, target B -97.9 dBm"
+99500,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+99520,CONNECTED,HANDOVER,C,"policy: serving B -101.0 dBm, target C -95.3 dBm"
+99560,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+99760,CONNECTED,HANDOVER,B,"policy: serving C -99.0 dBm, target B -97.4 dBm"
+99800,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+99820,CONNECTED,HANDOVER,C,"policy: serving B -98.7 dBm, target C -96.9 dBm"
+99860,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+99920,CONNECTED,HANDOVER,B,"policy: serving C -98.1 dBm, target B -98.0 dBm"
+99960,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+100060,CONNECTED,HANDOVER,C,"policy: serving B -97.9 dBm, target C -96.2 dBm"
+100100,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+100160,CONNECTED,HANDOVER,B,"policy: serving C -99.0 dBm, target B -95.9 dBm"
+100200,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+100220,CONNECTED,HANDOVER,C,"policy: serving B -97.7 dBm, target C -95.5 dBm"
+100260,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+106020,CONNECTED,HANDOVER,B,"policy: serving C -104.2 dBm, target B -103.2 dBm"
+106060,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+106080,CONNECTED,HANDOVER,C,"policy: serving B -105.5 dBm, target C -105.3 dBm"
+106120,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+106140,CONNECTED,HANDOVER,B,"policy: serving C -106.7 dBm, target B -104.8 dBm"
+106180,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+106280,CONNECTED,HANDOVER,C,"policy: serving B -105.6 dBm, target C -104.0 dBm"
+106320,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+106340,CONNECTED,HANDOVER,B,"policy: serving C -107.2 dBm, target B -107.0 dBm"
+106380,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+106460,CONNECTED,HANDOVER,C,"policy: serving B -106.7 dBm, target C -106.2 dBm"
+106500,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+106540,CONNECTED,HANDOVER,B,"policy: serving C -108.4 dBm, target B -107.1 dBm"
+106580,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+106620,CONNECTED,HANDOVER,C,"policy: serving B -108.9 dBm, target C -108.2 dBm"
+106660,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+106700,CONNECTED,HANDOVER,B,"policy: serving C -106.4 dBm, target B -104.5 dBm"
+106740,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+106800,CONNECTED,HANDOVER,C,"policy: serving B -106.7 dBm, target C -104.1 dBm"
+106840,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+106880,CONNECTED,HANDOVER,B,"policy: serving C -106.3 dBm, target B -106.1 dBm"
+106920,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+106940,CONNECTED,HANDOVER,C,"policy: serving B -103.8 dBm, target C -103.7 dBm"
+106980,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+107040,CONNECTED,HANDOVER,B,"policy: serving C -103.7 dBm, target B -103.7 dBm"
+107080,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+107260,CONNECTED,HANDOVER,C,"policy: serving B -104.4 dBm, target C -104.2 dBm"
+107300,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+107320,CONNECTED,HANDOVER,B,"policy: serving C -107.1 dBm, target B -102.9 dBm"
+107360,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+107740,CONNECTED,HANDOVER,C,"policy: serving B -100.1 dBm, target C -99.9 dBm"
+107780,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+107800,CONNECTED,HANDOVER,B,"policy: serving C -104.6 dBm, target B -101.4 dBm"
+107840,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+107860,CONNECTED,HANDOVER,C,"policy: serving B -102.6 dBm, target C -102.1 dBm"
+107900,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+107920,CONNECTED,HANDOVER,B,"policy: serving C -106.9 dBm, target B -102.8 dBm"
+107960,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+107980,CONNECTED,HANDOVER,C,"policy: serving B -102.4 dBm, target C -99.4 dBm"
+108020,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+108040,CONNECTED,HANDOVER,B,"policy: serving C -102.7 dBm, target B -100.6 dBm"
+108080,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+108100,CONNECTED,HANDOVER,C,"policy: serving B -102.0 dBm, target C -101.9 dBm"
+108140,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+108160,CONNECTED,HANDOVER,B,"policy: serving C -101.8 dBm, target B -100.2 dBm"
+108200,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+108300,CONNECTED,HANDOVER,C,"policy: serving B -102.5 dBm, target C -101.9 dBm"
+108340,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+108360,CONNECTED,HANDOVER,B,"policy: serving C -99.6 dBm, target B -99.0 dBm"
+108400,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+108440,CONNECTED,HANDOVER,C,"policy: serving B -101.1 dBm, target C -100.7 dBm"
+108480,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+108500,CONNECTED,HANDOVER,B,"policy: serving C -102.0 dBm, target B -99.1 dBm"
+108540,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+109260,CONNECTED,HANDOVER,C,"policy: serving B -99.9 dBm, target C -97.3 dBm"
+109300,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+109320,CONNECTED,HANDOVER,B,"policy: serving C -98.5 dBm, target B -97.8 dBm"
+109360,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+110020,CONNECTED,HANDOVER,C,"policy: serving B -101.5 dBm, target C -99.9 dBm"
+110060,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+110080,CONNECTED,HANDOVER,B,"policy: serving C -102.8 dBm, target B -100.0 dBm"
+110120,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+110140,CONNECTED,HANDOVER,C,"policy: serving B -101.1 dBm, target C -97.8 dBm"
+110180,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+110200,CONNECTED,HANDOVER,B,"policy: serving C -100.4 dBm, target B -97.9 dBm"
+110240,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+110260,CONNECTED,HANDOVER,C,"policy: serving B -103.4 dBm, target C -101.4 dBm"
+110300,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+113000,CONNECTED,HANDOVER,B,"policy: serving C -100.4 dBm, target B -98.5 dBm"
+113040,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+113120,CONNECTED,HANDOVER,C,"policy: serving B -97.9 dBm, target C -95.8 dBm"
+113160,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+113180,CONNECTED,HANDOVER,B,"policy: serving C -98.6 dBm, target B -97.1 dBm"
+113220,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+113240,CONNECTED,HANDOVER,C,"policy: serving B -100.1 dBm, target C -98.9 dBm"
+113280,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+113300,CONNECTED,HANDOVER,B,"policy: serving C -96.8 dBm, target B -95.1 dBm"
+113340,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+113360,CONNECTED,HANDOVER,C,"policy: serving B -97.9 dBm, target C -94.0 dBm"
+113400,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+113420,CONNECTED,HANDOVER,B,"policy: serving C -98.5 dBm, target B -97.6 dBm"
+113460,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+113480,CONNECTED,HANDOVER,C,"policy: serving B -99.5 dBm, target C -98.3 dBm"
+113520,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+113560,CONNECTED,HANDOVER,B,"policy: serving C -99.1 dBm, target B -98.3 dBm"
+113600,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+113640,CONNECTED,HANDOVER,C,"policy: serving B -99.1 dBm, target C -98.3 dBm"
+113680,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+113700,CONNECTED,HANDOVER,B,"policy: serving C -101.8 dBm, target B -101.2 dBm"
+113740,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+113780,CONNECTED,HANDOVER,C,"policy: serving B -98.7 dBm, target C -98.2 dBm"
+113820,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+113840,CONNECTED,HANDOVER,B,"policy: serving C -100.8 dBm, target B -99.7 dBm"
+113880,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+113920,CONNECTED,HANDOVER,C,"policy: serving B -103.5 dBm, target C -98.7 dBm"
+113960,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+115060,CONNECTED,HANDOVER,B,"policy: serving C -99.5 dBm, target B -98.4 dBm"
+115100,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+115120,CONNECTED,HANDOVER,C,"policy: serving B -104.1 dBm, target C -97.9 dBm"
+115160,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+115240,CONNECTED,HANDOVER,B,"policy: serving C -101.4 dBm, target B -100.1 dBm"
+115280,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+115300,CONNECTED,HANDOVER,C,"policy: serving B -102.3 dBm, target C -98.2 dBm"
+115340,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+115380,CONNECTED,HANDOVER,B,"policy: serving C -99.9 dBm, target B -98.0 dBm"
+115420,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+115440,CONNECTED,HANDOVER,C,"policy: serving B -101.3 dBm, target C -101.2 dBm"
+115480,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)
+115920,CONNECTED,HANDOVER,B,"policy: serving C -101.3 dBm, target B -100.8 dBm"
+115960,HANDOVER,CONNECTED,B,handover complete (contention-free access at target)
+115980,CONNECTED,HANDOVER,C,"policy: serving B -102.3 dBm, target C -100.4 dBm"
+116020,HANDOVER,CONNECTED,C,handover complete (contention-free access at target)

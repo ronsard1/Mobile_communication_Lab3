@@ -1,0 +1,71 @@
+Step 1: NumPy 2.5.3, Matplotlib 3.11.2
+Valid cluster sizes N = i^2 + ij + j^2 up to 21: [1, 3, 4, 7, 9, 12, 13, 16, 19, 21]
+==============================================================================
+Steps 2-6, lab task 1: layouts and reuse ratio
+  N   (i,j)  Q = sqrt(3N)  D/R measured  groups seen  cells drawn
+  1  (1, 0)         1.732         1.732            1           61
+  3  (1, 1)         3.000         3.000            3           61
+  4  (2, 0)         3.464         3.464            4           61
+  7  (2, 1)         4.583         4.583            7           91
+  9  (3, 0)         5.196         5.196            9           91
+ 12  (2, 2)         6.000         6.000           12          127
+  measured D/R equals sqrt(3N) for every N (asserted)
+  first-tier SIR estimate S/I = Q^4 / 6 (n = 4, six co-channel interferers):
+    N =  1: Q =  1.73, SIR =   1.76 dB, channels per cell = total / 1
+    N =  3: Q =  3.00, SIR =  11.30 dB, channels per cell = total / 3
+    N =  4: Q =  3.46, SIR =  13.80 dB, channels per cell = total / 4
+    N =  7: Q =  4.58, SIR =  18.66 dB, channels per cell = total / 7
+    N =  9: Q =  5.20, SIR =  20.85 dB, channels per cell = total / 9
+    N = 12: Q =  6.00, SIR =  23.34 dB, channels per cell = total / 12
+==============================================================================
+Steps 7-14: 300 samples, serving A falls, neighbour B rises, close stretch at samples 100-150 (seed 9)
+configuration                handovers ping-pongs first HO min serving samples < -100 sustained < -100
+naive (0 dB, no TTT)                39         38       89       -97.1              0               no
+hysteresis 3 dB                      5          2      105       -97.9              0               no
+hysteresis 3 dB + TTT 5              1          0      167       -98.9              0               no
+over-tuned 8 dB + TTT 20             1          0      201      -104.4             19              YES
+  (sustained = 3 consecutive samples below -100 dBm, the too-late-handover criterion used below)
+==============================================================================
+Lab task 2: third neighbour C (close to A and B at the cell edge, weaker than B later); strongest candidate chosen
+  naive (0 dB, no TTT)         handovers  54 (into C: 27), ping-pongs 46, min serving  -95.3 dBm
+  hysteresis 3 dB              handovers   4 (into C:  2), ping-pongs  1, min serving  -97.0 dBm
+  hysteresis 3 dB + TTT 5      handovers   2 (into C:  1), ping-pongs  0, min serving  -98.3 dBm
+==============================================================================
+Lab task 3: sweep H 0-10 dB x TTT 0-20 samples (231 combinations) over 100 random realisations
+  objective: minimise mean handover count subject to <= 2% of runs with a sustained drop below -100 dBm
+  acceptable combinations: 19; chosen H = 5 dB, TTT = 0 samples -> mean 1.02 handovers, 0.00 ping-pongs, too-late in 1.0% of runs
+  for comparison H = 0 dB, TTT = 0: mean 19.66 handovers, 17.83 ping-pongs, too-late 0.0%
+  for comparison H = 3 dB, TTT = 0: mean 1.68 handovers, 0.27 ping-pongs, too-late 0.0%
+  for comparison H = 3 dB, TTT = 5: mean 1.00 handovers, 0.00 ping-pongs, too-late 12.0%
+  for comparison H = 8 dB, TTT = 20: mean 1.00 handovers, 0.00 ping-pongs, too-late 93.0%
+  chosen setting on the seed-9 series: 1 handover(s), first at sample 165, min serving -98.8 dBm
+==============================================================================
+Lab task 4: slow versus fast device, 200 random realisations each
+  pedestrian (base model)
+    naive                  mean handovers 18.75, mean ping-pongs 16.89, runs with sustained drop < -100 dBm:   0.0%, median min serving  -97.4 dBm
+    3 dB + TTT 5           mean handovers  1.00, mean ping-pongs  0.00, runs with sustained drop < -100 dBm:  12.0%, median min serving  -99.8 dBm
+    chosen 5 dB + TTT 0    mean handovers  1.01, mean ping-pongs  0.00, runs with sustained drop < -100 dBm:   2.0%, median min serving  -98.9 dBm
+  high speed (3x slope, 2x walk, 1/3 edge time)
+    naive                  mean handovers  6.45, mean ping-pongs  5.31, runs with sustained drop < -100 dBm:   0.5%, median min serving  -97.0 dBm
+    3 dB + TTT 5           mean handovers  1.00, mean ping-pongs  0.00, runs with sustained drop < -100 dBm:  15.5%, median min serving -100.3 dBm
+    chosen 5 dB + TTT 0    mean handovers  1.00, mean ping-pongs  0.00, runs with sustained drop < -100 dBm:   2.5%, median min serving  -98.5 dBm
+==============================================================================
+Lab task 5: cell individual offset favouring B (load balancing), hysteresis 3 dB + TTT 5
+  offset B +0 dB: first handover at sample 167, handovers 1, ping-pongs 0, min serving  -98.9 dBm | naive with the same offset: 39 handovers, first at 89
+  offset B +2 dB: first handover at sample 166, handovers 1, ping-pongs 0, min serving  -98.9 dBm | naive with the same offset: 25 handovers, first at 84
+  offset B +4 dB: first handover at sample 109, handovers 1, ping-pongs 0, min serving  -98.8 dBm | naive with the same offset: 9 handovers, first at 84
+  offset B +6 dB: first handover at sample 100, handovers 1, ping-pongs 0, min serving  -98.8 dBm | naive with the same offset: 7 handovers, first at 75
+==============================================================================
+Lab task 6: 120-degree sectoring, N = 7
+  N =  3, 1 sector(s) per site: 6 first-tier interferer(s), SIR =  11.3 dB
+  N =  3, 3 sector(s) per site: 2 first-tier interferer(s), SIR =  16.1 dB
+  N =  3, 6 sector(s) per site: 1 first-tier interferer(s), SIR =  19.1 dB
+  N =  4, 1 sector(s) per site: 6 first-tier interferer(s), SIR =  13.8 dB
+  N =  4, 3 sector(s) per site: 2 first-tier interferer(s), SIR =  18.6 dB
+  N =  4, 6 sector(s) per site: 1 first-tier interferer(s), SIR =  21.6 dB
+  N =  7, 1 sector(s) per site: 6 first-tier interferer(s), SIR =  18.7 dB
+  N =  7, 3 sector(s) per site: 2 first-tier interferer(s), SIR =  23.4 dB
+  N =  7, 6 sector(s) per site: 1 first-tier interferer(s), SIR =  26.4 dB
+  N = 12, 1 sector(s) per site: 6 first-tier interferer(s), SIR =  23.3 dB
+  N = 12, 3 sector(s) per site: 2 first-tier interferer(s), SIR =  28.1 dB
+  N = 12, 6 sector(s) per site: 1 first-tier interferer(s), SIR =  31.1 dB
